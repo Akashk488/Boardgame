@@ -105,7 +105,7 @@ pipeline {
                     }  
                 }
             }
-        }
+        
         
         stage('K8-Deploymey-verify') {
             steps {
