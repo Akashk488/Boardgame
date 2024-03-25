@@ -14,7 +14,7 @@ pipeline {
                 cleanWs()
             }
         }
-        stage
+        
         stage('Checkout') {
             steps {
                 checkout scm
