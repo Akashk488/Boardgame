@@ -83,7 +83,7 @@ pipeline {
         
         stage('Docker image Scanner') {
             steps {
-                sh 'trivy image --formate table -o trivy-image-report.html akash488/board-game:latest'
+                sh 'trivy image --format table -o trivy-image-report.html akash488/board-game:latest'
             }
         }
         
