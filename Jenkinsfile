@@ -17,7 +17,7 @@ pipeline {
         
         stage('Compile') {               //check any syntacs error in source code
             steps {
-                sh 'mvn complie'
+                sh 'mvn compile'
             }
         }
         
