@@ -29,7 +29,8 @@ pipeline {
         
         stage('File System Scanner') {
             steps {
-                sh 'trivy fs --formate table -o trivy-fs-report.html .'
+                sh 'trivy fs --format table -o trivy-fs-report.html .'
+                
             }
         }
         
