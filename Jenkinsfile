@@ -4,7 +4,7 @@ pipeline {
         jdk 'jdk-17'
         maven 'maven'
     }
-    enviornment {
+    environment {
         SCANNER_HOME= tool 'sonar-scanner'
     }
 
