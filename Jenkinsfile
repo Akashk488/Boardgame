@@ -100,7 +100,7 @@ pipeline {
 
         stage('K8-Deployment') {
             steps {
-                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8-cred', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://172.31.11.71:6443') {
+                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8-token', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://172.31.11.71:6443') {
                             sh 'kubectl apply -f deployment-service.yaml'
                     }  
                 }
