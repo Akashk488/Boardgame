@@ -100,7 +100,7 @@ pipeline {
 
         stage('K8-Deployment') {
             steps {
-                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8-token', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: ' https://172.31.35.35:6443') {
+                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8-token', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://172.31.35.35:6443') {
                             sh 'kubectl apply -f deployment-service.yaml'
                     }  
                 }
@@ -109,7 +109,7 @@ pipeline {
         
         stage('K8-Deploymey-verify') {
             steps {
-                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8-token', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: ' https://172.31.35.35:6443') {
+                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8-token', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://172.31.35.35:6443') {
                      sh 'kubectl get pods -n webapps'
                      sh 'kubectl get svc -n webapps'
                 }
